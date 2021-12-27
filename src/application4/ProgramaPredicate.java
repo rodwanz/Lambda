@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Locale;
 
 import entities4.Product;
+import util.ProductPredicate;
 
 public class ProgramaPredicate {
 
@@ -18,7 +19,7 @@ public class ProgramaPredicate {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		list.removeIf(p -> p.getPrice() >= 100);
+		list.removeIf(new ProductPredicate());
 		
 		for (Product p : list) {
 			System.out.println(p);
