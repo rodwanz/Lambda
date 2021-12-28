@@ -21,9 +21,7 @@ public class ProgramaPredicate {
 		
 		double min = 100.0;
 		
-		Predicate<Product> pred = p -> p.getPrice() >= min;
-		
-		list.removeIf(pred);//METHOD REFERENCE
+		list.removeIf(p -> p.getPrice() >= min);//METHOD REFERENCE
 		
 		for (Product p : list) {
 			System.out.println(p);
