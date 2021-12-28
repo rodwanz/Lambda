@@ -19,7 +19,7 @@ public class ProgramaPredicate {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		list.removeIf(new ProductPredicate());
+		list.removeIf(Product::staticProductPredicate);//METHOD REFERENCE
 		
 		for (Product p : list) {
 			System.out.println(p);
